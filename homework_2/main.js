@@ -9,7 +9,7 @@ while(Number.isInteger(minNumberN) === false)
 do{
     maxNumberM = +prompt('Введіть число M');
 }
-while(Number.isInteger(maxNumberM) === false)
+while(Number.isInteger(maxNumberM) === false || maxNumberM < minNumberN)
 
 skipPariedNumbers = confirm('Пропустити парні числа?');
 for (let i = minNumberN; i <= maxNumberM; i++){
