@@ -1,16 +1,5 @@
-const arrayNumeral = [];
-let numberPow = 0;
-let masLetters =[];
-const tax = 19.5;
-let count = 0; 
-let convertSumOfMoney = "";
-const dollarRate = 28.35;
-let masLatterPassword = [];
-let changedWord = [];
-let stringWithoutSpaces = [];
-let masReverceString = [];
-
 const getMaxDigit = (number) => {
+    const arrayNumeral = [];
     for (let i = 0; i < String(number).length; i++) {
        let valueWithoutLastNumeral =  number % 10;
        valueWithoutLastNumeral = Math.floor(valueWithoutLastNumeral); 
@@ -21,6 +10,7 @@ const getMaxDigit = (number) => {
     return maxNumber;
 }
 const getNumberPow = (num,pow) =>{
+    let numberPow = 0;
     if(pow === 0){
       numberPow = 1;
     }
@@ -33,6 +23,7 @@ const getNumberPow = (num,pow) =>{
 return numberPow;
 }
 const getCorrectName = (name) => {
+    let masLetters =[];
     masLetters[0] = name[0].toUpperCase();
     for (let i = 1; i < name.length; i++) {
        masLetters[i] = name[i].toLowerCase();
@@ -41,6 +32,7 @@ const getCorrectName = (name) => {
     return correctName;
 }
 const getBalanceOfSalary = (salary) => {
+    const tax = 19.5;
     const balanceOfSalary = salary - (salary * tax / 100);
     return balanceOfSalary;
 }
@@ -48,6 +40,7 @@ const getRandomNumber = (minNumber,maxNumber) => {
     return Math.floor(Math.random() * (maxNumber - minNumber) + minNumber);
 }
 const getNumberOfLetters = (letter,word) => {
+    let count = 0; 
 for (let i = 0; i < word.length; i++) {
     if (word[i].toLowerCase() === letter) {
         count++;
@@ -56,6 +49,8 @@ for (let i = 0; i < word.length; i++) {
     return count;
 }
 const convertCurrency = function(sumOfMoney) {
+    let convertSumOfMoney = "";
+    const dollarRate = 28.35;
     if (sumOfMoney.slice(-3).toUpperCase() === 'UAH'){
         convertSumOfMoney = (parseInt(sumOfMoney) / dollarRate).toFixed(2) + '$' ;
     }
@@ -68,6 +63,7 @@ const convertCurrency = function(sumOfMoney) {
     return convertSumOfMoney;
 }
 const getRandomPassword = (passwordLength = 8) => {
+    let masLatterPassword = [];
     for (let i = 0; i < passwordLength; i++) {
         randNum = (Math.random() * 9).toFixed();
         masLatterPassword.push(randNum);
@@ -76,6 +72,7 @@ const getRandomPassword = (passwordLength = 8) => {
     return password;
 }
 const deleteLetters = (letter,word) => {
+    let changedWord = [];
     for (let i = 0; i < word.length; i++) {
         if (word[i].toLowerCase() === letter) {
             continue;
@@ -84,19 +81,31 @@ const deleteLetters = (letter,word) => {
     }
     return changedWord;
 }
-const isPalyndrom = (string) => {
-    for (let i = 0; i < string.length; i++) {
-        if (string[i].toLowerCase() === ' '){
+const isPalyndrom = (sentence) => {
+    let sentenceWithoutSpaces = [];
+    let masReverceSentence = [];
+    for (let i = 0; i < sentence.length; i++) {
+        if (sentence[i].toLowerCase() === ' '){
             continue;
         }
-        stringWithoutSpaces += string[i].toLowerCase();
+        sentenceWithoutSpaces += sentence[i].toLowerCase();
     }
-    j = stringWithoutSpaces.length;
-    for (let i = 0; i <= stringWithoutSpaces.length; i++) {
-        masReverceString[i] = stringWithoutSpaces[j--];
-        reverceString = masReverceString.join('')
+    j = sentenceWithoutSpaces.length;
+    for (let i = 0; i <= sentenceWithoutSpaces.length; i++) {
+        masReverceSentence[i] = sentenceWithoutSpaces[j--];
+        reverceSentence = masReverceSentence.join('')
     }
-    return reverceString === stringWithoutSpaces;
+    return reverceSentence === sentenceWithoutSpaces;
+}
+const deleteDuplicateLetter = (sentence) => {
+    const lowercaseSentence = sentence.toLowerCase().split('')
+    let sentenceWithoutSpaces = [];
+    for(let i = 0; i < lowercaseSentence.length; i++){
+        if(sentence.toLowerCase().indexOf(lowercaseSentence[i]) === sentence.toLowerCase().lastIndexOf(lowercaseSentence[i])){
+            sentenceWithoutSpaces += lowercaseSentence[i];
+        }
+    }
+    return sentenceWithoutSpaces;
 }
 
 document.writeln(`Результат выполнения первой функции: ${getMaxDigit(9824566232)} </br>`);
@@ -109,3 +118,4 @@ document.writeln(`Результат выполнения седьмой фун�
 document.writeln(`Результат выполнения восьмой функции: ${getRandomPassword()} </br>`);
 document.writeln(`Результат выполнения девятой функции: ${deleteLetters("a","blalalalasgaafdg")} </br>`);
 document.writeln(`Результат выполнения десятой функции: ${isPalyndrom("Я несу гусеня")} </br>`);
+document.writeln(`Результат выполнения одиннадцатой функции: ${deleteDuplicateLetter("alLtrpALllam")} </br>`);
