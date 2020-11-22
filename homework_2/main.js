@@ -5,11 +5,11 @@ let sumNumbers = 0;
 do{
     minNumberN = +prompt('Введіть число N');
 }
-while(Number.isInteger(minNumberN) === false)
+while(!Number.isInteger(minNumberN) || minNumberN == '')
 do{
     maxNumberM = +prompt('Введіть число M');
 }
-while(Number.isInteger(maxNumberM) === false || maxNumberM < minNumberN)
+while(!Number.isInteger(maxNumberM) || maxNumberM < minNumberN)
 
 skipPariedNumbers = confirm('Пропустити парні числа?');
 for (let i = minNumberN; i <= maxNumberM; i++){
