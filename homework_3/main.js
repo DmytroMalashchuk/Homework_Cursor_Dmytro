@@ -1,5 +1,11 @@
 const getMaxDigit = (number) => {
-    const maxNumber = Math.max.apply(null,getArrayNumeral(number));
+    const arrayNumeral = getArrayNumeral(number);
+    let maxNumber = -Infinity;
+    for (let i = 0; i < arrayNumeral.length; i++) {
+        if (arrayNumeral[i] > maxNumber){
+            maxNumber = arrayNumeral[i];
+        }        
+    }
     return maxNumber;
 }
 const getArrayNumeral = (number) => {
@@ -8,7 +14,7 @@ const getArrayNumeral = (number) => {
        let valueWithoutLastNumeral =  number % 10;
        valueWithoutLastNumeral = Math.floor(valueWithoutLastNumeral); 
        arrayNumeral.push(valueWithoutLastNumeral);      
-       number /=10;     
+       number /= 10;     
     }    
     return arrayNumeral;
 }
