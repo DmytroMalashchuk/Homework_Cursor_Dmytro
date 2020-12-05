@@ -100,17 +100,64 @@ divideByThree = (word) => {
 	}
 }
 
-document.writeln(`getRandomArray: ${getRandomArray(15, 1, 100)} </br>`);
-document.writeln(`getModa: 
+/*generateCombinations = (word) => {
+	if(word.length < 10){
+		const arrayLaters = [...word];
+		const arrayResult = [];
+		if(arrayLaters.length === 2){
+			for (let i = 0; i < arrayLaters.length; i++) {
+				if(i + 1 === arrayLaters.length){
+					arrayResult.push(arrayLaters[i] + arrayLaters[0]);
+				}				
+				else{
+					arrayResult.push(arrayLaters[i] + arrayLaters[i + 1]);
+				}
+			}
+		}
+		else {
+			arrayResult.push(arrayLaters.join(""));
+			const tempArray = [];
+			tempArray[0] = arrayLaters[0];
+			tempArray[1] = arrayLaters[2];
+			tempArray[2] = arrayLaters[1];
+			arrayResult.push(tempArray.join(""));
+			tempArray[0] = arrayLaters[1];
+			tempArray[1] = arrayLaters[0];
+			tempArray[2] = arrayLaters[2];
+			arrayResult.push(tempArray.join(""));
+			tempArray[0] = arrayLaters[1];
+			tempArray[1] = arrayLaters[2];
+			tempArray[2] = arrayLaters[0];
+			arrayResult.push(tempArray.join(""));
+			tempArray[0] = arrayLaters[2];
+			tempArray[1] = arrayLaters[1];
+			tempArray[2] = arrayLaters[0];
+			arrayResult.push(tempArray.join(""));
+			tempArray[0] = arrayLaters[2];
+			tempArray[1] = arrayLaters[0];
+			tempArray[2] = arrayLaters[1];
+			arrayResult.push(tempArray.join(""));
+		}
+		return arrayResult;
+	}
+	else{
+		return "Error";
+	}
+}*/
+
+
+document.writeln(`Результат выполнения функции getRandomArray: ${getRandomArray(15, 1, 100)} </br>`);
+document.writeln(`Результат выполнения функции getModa: 
 ${getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} </br>`);
-document.writeln(`getAverage: 
+document.writeln(`Результат выполнения функции getAverage: 
 ${getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} </br>`);
-document.writeln(`getMedian: 
+document.writeln(`Результат выполнения функции getMedian: 
 ${getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} </br>`);
-document.writeln(`filterEvenNumbers: ${filterEvenNumbers(1, 2, 3, 4, 5, 6)} </br>`);
-document.writeln(`countPositiveNumbers: ${countPositiveNumbers(1, -2, 3, -4, -5, 6)} </br>`);
-document.writeln(`getDividedByFive: 
+document.writeln(`Результат выполнения функции filterEvenNumbers: ${filterEvenNumbers(1, 2, 3, 4, 5, 6)} </br>`);
+document.writeln(`Результат выполнения функции countPositiveNumbers: ${countPositiveNumbers(1, -2, 3, -4, -5, 6)} </br>`);
+document.writeln(`Результат выполнения функции getDividedByFive: 
 ${getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} </br>`);
 const badWords = ["shit", "fuck"];
-document.writeln(`replaceBadWords: ${replaceBadWords("Holy shit!")} </br>`)
-document.writeln(`divideByThree: ${divideByThree("live")} <br>`)
+document.writeln(`Результат выполнения функции replaceBadWords: ${replaceBadWords("Holy shit!")} </br>`)
+document.writeln(`Результат выполнения функции divideByThree: ${divideByThree("live")} <br>`)
+//document.writeln(`Результат выполнения функции generateCombinations: ${generateCombinations("man")} <br>`)
