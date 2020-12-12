@@ -47,9 +47,7 @@ const students = [{
   getStudentInfo = (student) => {
       const {name} = student;
       const {course} = student;
-      const averageMark = getAverageMark(student);
-      const studentInfo = `name: ${name}, course: ${course}, averageMark: ${averageMark}`
-      return studentInfo;
+      return `name: ${name}, course: ${course}, averageMark: ${getAverageMark(student)}`;
   }
 
   getStudentsNames = (students) => {
