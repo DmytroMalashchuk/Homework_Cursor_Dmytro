@@ -60,7 +60,7 @@ const students = [{
 
   getBestStudent = (students) => {
       students.sort((a,b) => {
-          return getAverageMark(a) - getAverageMark(a);
+          return getAverageMark(a) - getAverageMark(b);
       })
       return students[students.length - 1].name;
   }
@@ -79,10 +79,9 @@ const students = [{
   return countLetters;
   }
 
-  document.writeln(`Результат работы функции getSubjects: ${getSubjects(students[0])} </br>`)
-  document.writeln(`Результат работы функции getAverageMark: ${getAverageMark(students[0])} </br>`)
-  document.writeln(`Результат работы функции getStudentInfo: ${getStudentInfo(students[0])} </br>`)
-  document.writeln(`Результат работы функции getStudentsNames: ${getStudentsNames(students)} </br>`)
-  document.writeln(`Результат работы функции getBestStudent: ${getBestStudent(students)} </br>`)
-  document.writeln(`Результат работы функции calculateWordLetters: ${calculateWordLetters("test")} 
-  ${Object.entries(calculateWordLetters("test"))} </br>`)
+  console.log(`Результат работы функции getSubjects: ${getSubjects(students[0])}`)
+  console.log(`Результат работы функции getAverageMark: ${getAverageMark(students[0])}`)
+  console.log(`Результат работы функции getStudentInfo: ${getStudentInfo(students[0])}`)
+  console.log(`Результат работы функции getStudentsNames: ${getStudentsNames(students)}`)
+  console.log(`Результат работы функции getBestStudent: ${getBestStudent(students)}`)
+  console.log(`Результат работы функции calculateWordLetters: ${Object.entries(calculateWordLetters("test"))}`)
