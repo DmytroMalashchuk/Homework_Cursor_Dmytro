@@ -1,0 +1,19 @@
+body{
+    background: url(image/pianino2.jpg);
+    background-size: cover;
+}
+
+.sounds{
+    background-color: azure;
+    color: black;
+    display: table-cell;
+    text-align: center;
+    font-size: 30px;
+    border: 10px solid black;
+    height: 130px;
+    width: 50px;
+}
+
+#panel{
+    margin-top: 30%;
+}
