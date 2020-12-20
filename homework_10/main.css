@@ -12,6 +12,7 @@ body{
     border: 10px solid black;
     height: 130px;
     width: 50px;
+    cursor: default;
 }
 
 #panel{
