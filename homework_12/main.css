@@ -1,0 +1,17 @@
+body{
+    background-image: url(background/background_1.jfif);
+    background-size:100%;
+    font-family: 'Langar', cursive;
+    position: relative;
+}
+#listHeroes{
+    padding-top: 350px;
+    font-size: 26px;
+    font-weight: 700;
+}
+#getHeroes,
+#getPlanets{
+    font-family: 'Langar', cursive;
+    border-radius: 5px;
+    padding: 10px
+}
