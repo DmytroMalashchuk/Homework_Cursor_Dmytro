@@ -134,3 +134,7 @@ export const createChinaWord = () => {
     }
     getRandomChinese(4).then((result) => console.log(result));
 }
+export function* getId() {
+    let i = 0;
+    while(true) yield ++i;
+}

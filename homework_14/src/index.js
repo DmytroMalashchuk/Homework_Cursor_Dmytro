@@ -37,10 +37,15 @@ const student_1 = new Student('NURE', 3, 'Dmytro Malashchuk');
 import{Student} from "./utils";
 student_1.getInfo();
 //HW_8
-import{generateBlocks} from "./utils";
-setInterval(()=>generateBlocks(),1000);
+//import{generateBlocks} from "./utils";
+//setInterval(()=>generateBlocks(),1000);
 //HW_9
-
 import{createChinaWord} from "./utils";
 createChinaWord();
-
+//HW_11
+import{getId} from "./utils";
+const idGenerator = getId();
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+//HW_13
