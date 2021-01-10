@@ -1,4 +1,4 @@
-import "./main.css"
+import "./index.css"
 
 import{maxCost} from "./utils";
 import{sumNumbers} from "./utils";
