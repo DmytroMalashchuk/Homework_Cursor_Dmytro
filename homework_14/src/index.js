@@ -10,7 +10,6 @@ import{getMiddleTaxes} from "./utils";
 import{Student} from "./utils";
 import{createChinaWord} from "./utils";
 import{getId} from "./utils";
-
 const COST_HOT_DOG = 15.678;
 const COST_PIZZA = 123.965;
 const COST_KEBAB = 90.2345;
